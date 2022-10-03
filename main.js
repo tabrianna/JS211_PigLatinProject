@@ -13,8 +13,41 @@ const rl = readline.createInterface({
 
 const pigLatin = (word) => {
 
-  // Your code here
 
+  let firstConsonants = "";
+  // firstConsonants = firstConsonants.toLowerCase().trim()
+  word = word.toLowerCase().trim()
+
+  if(word[0] != "a" && word[0] != "e" && word[0] != "i" && word[0] != "o" && word[0] != "u" &&  word[1] === "a" && word[1] === "e" && word[1] === "i" && word[1] === "o" && word[1] === "u")
+  {
+  //cut the first letter off of the word
+  firstConsonants = firstConsonants + word[0]
+
+  word = word.slice(1)
+  word = word + firstConsonants
+  console.log("it works!!!!!!!!!!!!!!!")
+  // Your code here
+  }
+
+  else if(word[0] != "a" && word[0] != "e" && word[0] != "i" && word[0] != "o" && word[0] != "u" && word[1] != "a" && word[1] != "e" && word[1] != "i" && word[1] != "o" && word[1] != "u")
+  {
+  
+  firstConsonants = firstConsonants + word[0] + word[1]
+  word = word.slice(2)
+  word = word + firstConsonants
+  console.log("second workinggg")
+  }
+
+
+  if(word[0] === "a" && word[0] === "e" && word[0] === "i" && word[0] === "o" && word[0] === "u" && word)
+  {
+
+  firstConsonants = word  
+  word = word + firstConsonants + "y" 
+  }
+
+  word = word + firstConsonants + "ay"
+  console.log(word)
 }
 
 // the first function called in the program to get an input from the user
