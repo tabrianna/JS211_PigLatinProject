@@ -89,6 +89,9 @@ if (typeof describe === 'function') {
 
 }
 
+//this should use the space in html to display the piglatin result
+document.getElementById("output").innerHTML = pigLatin;
+
 
 
 
